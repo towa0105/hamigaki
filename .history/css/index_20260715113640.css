@@ -32,12 +32,8 @@ button {
 }
 
 .modal {
-    display: none;
+    display: block;
     width: 351px;
     height: 372px;
     background-color: #0079CF;
-}
-
-.modal .active {
-    display: block;
 }

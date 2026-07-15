@@ -38,6 +38,4 @@ button {
     background-color: #0079CF;
 }
 
-.modal .active {
-    display: block;
-}
+.modal .active {}

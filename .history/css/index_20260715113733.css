@@ -37,7 +37,3 @@ button {
     height: 372px;
     background-color: #0079CF;
 }
-
-.modal .active {
-    display: block;
-}
