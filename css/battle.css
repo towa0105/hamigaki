@@ -1,6 +1,6 @@
 body {
     font-family: Alan sans;
-    background-image: url(../img/background_home.png);
+    background-image: url(../img/background_battle.png);
     background-position: top;
 
 }
@@ -14,26 +14,43 @@ header {
     justify-content: space-between;
 }
 
+.flex_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
 .date_wrap {
     display: flex;
     justify-self: center;
     gap: 16px;
     height: 16px;
-
-
-    /* p {
-        position: absolute;
-        top: 2px;
-        right: 15px; */
 }
 
-
-button {
-    /* margin-top: 80px; */
-    border: 3px solid #000;
-    background-color: #444;
-    color: aliceblue;
+.boss {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
 }
+
+.boss.damage {
+    transform: rotate(1.5);
+}
+
+.boss.active {
+    transform: rotate(0.2turn);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.brush {
+    display: flex;
+    justify-content: center;
+
+    &:active {
+        translate: 40px;
+    }
+}
+
 
 .modal {
     display: none;
@@ -44,33 +61,19 @@ button {
     background-color: rgba(51, 51, 51, 0.6);
 
     img {
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 
-}
-
-.modal_wrap {
-    display: flex;
-    /* flex-direction: column; */
 }
 
 .modal.active {
     display: block;
 
     img {
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-}
-
-
-.character {
-    display: flex;
-    justify-content: center;
-
-    img {
-        margin-top: 220px;
-    }
-
 }
