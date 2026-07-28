@@ -17,20 +17,37 @@ header {
 .flex_wrap {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .date_wrap {
+    position: relative;
+    width: 113px;
+    height: 26px;
+}
+
+.data_value {
+    position: absolute;
+    inset: 0;
     display: flex;
-    justify-self: center;
-    gap: 16px;
-    height: 16px;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
 }
 
 .boss {
-    display: flex;
-    justify-content: center;
     margin-top: 200px;
+
+    .boss_gauge {
+        background-color: tomato;
+        width: 100%;
+        height: 12px;
+        border-radius: 30px;
+        box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.25) inset;
+    }
 }
+
 
 .boss.damage {
     transform: rotate(1.5);
@@ -60,20 +77,37 @@ header {
     height: 100%;
     background-color: rgba(51, 51, 51, 0.6);
 
+    a {
+        color: #FFF;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: #0079CF;
+        display: flex;
+        width: 211px;
+        height: 80px;
+        padding: 8px 41px 8px 42px;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 30px;
+        background: #0079CF;
+        box-shadow: 2px 3px 9px 0 rgba(0, 56, 120, 0.30);
+
+    }
+
     img {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 40px;
     }
 
 }
 
 .modal.active {
-    display: block;
-
-    img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
