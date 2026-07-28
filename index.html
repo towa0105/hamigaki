@@ -7,6 +7,7 @@
     <title>歯磨き大戦</title>
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/common.js"></script>
     <script defer src="js/index.js"></script>
 </head>
 
@@ -15,24 +16,35 @@
         <img src="img/haeder_icon_img.png" alt="キャラアイコン">
         <div class="date">
             <div class="date_wrap">
-                <img src="img/Group 37.svg" alt="データ入れる枠">
+                <div class="data_box">
+                    <img src="img/Group 37.svg" alt="データ入れる枠">
+                    <span class="data_value"></span>
+                </div>
                 <img src="img/Group 37.svg" alt="データ入れる枠">
             </div>
         </div>
     </header>
     <main>
-        <div class="character">
-            <img src="img/character.png" alt="キャラ">
+        <div class="content_wrap">
+            <div class="character">
+                <img src="img/character.png" alt="キャラ">
+            </div>
+            <button type="button" class="play_btn">play</button>
         </div>
-        <button type="button" class="play_btn">play</button>
         <div class="modal">
             <img src="img/modal.png" alt="">
             <div class="modal_wrap">
-                <a href="battle.html">はじめる</a>
+                <a href="battle.html">はをみがく</a>
                 <button type="button" class="back_btn">戻る</button>
             </div>
         </div>
     </main>
+    <nav class="bottom_nav" aria-label="メインメニュー">
+        <a href="index.html" aria-label="ホーム"></a>
+        <a href="gatya.html" aria-label="ガチャ"></a>
+        <a href="#friends" aria-label="なかま"></a>
+        <a href="#records" aria-label="きろく"></a>
+    </nav>
 </body>
 
 </html>
