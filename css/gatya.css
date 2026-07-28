@@ -1,0 +1,131 @@
+body {
+    min-height: 100vh;
+    padding-bottom: 78px;
+    font-family: "Arial Rounded MT Bold", "Hiragino Maru Gothic ProN", sans-serif;
+    background-color: #dff5ff;
+    background-image: url(../img/background_gatya.jpg);
+    background-repeat: no-repeat;
+    background-position: center 72px;
+    background-size: min(100%, 440px) auto;
+}
+
+.gatya_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(100%, 440px);
+    height: 72px;
+    margin-inline: auto;
+    padding: 12px 10px 12px 15px;
+    background-color: #087dcc;
+}
+
+.header_icon img {
+    display: block;
+    width: 44px;
+    height: 44px;
+}
+
+.status_list {
+    display: flex;
+    gap: 18px;
+}
+
+.status_item {
+    display: flex;
+    align-items: center;
+    width: 113px;
+    height: 26px;
+    padding-left: 7px;
+    border: 1px dashed #0079cf;
+    border-radius: 3px;
+    background-color: #d6eeff;
+    color: #111;
+    font-weight: bold;
+}
+
+.status_icon {
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.status_value {
+    font-size: 17px;
+}
+
+.status_add {
+    display: grid;
+    place-items: center;
+    width: 17px;
+    height: 22px;
+    margin-left: 5px;
+    background-color: #4ba4df;
+    color: #fff;
+    font-size: 18px;
+}
+
+.gatya_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 440px);
+    min-height: calc(100vh - 150px);
+    margin-inline: auto;
+    padding: 74px 22px 84px;
+}
+
+.gatya_machine {
+    width: min(81vw, 324px);
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.gatya_button {
+    width: min(79vw, 348px);
+    min-height: 86px;
+    margin-top: 50px;
+    border-radius: 18px;
+    background-color: #087dcc;
+    color: #fff;
+    font-size: clamp(22px, 6vw, 26px);
+    font-weight: bold;
+    transition: transform 0.15s, opacity 0.15s;
+}
+
+.gatya_button:active,
+.gatya_button.is-drawing {
+    transform: scale(0.96);
+    opacity: 0.8;
+}
+
+.bottom_nav {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: min(100%, 440px);
+    aspect-ratio: 440 / 78;
+    background: url(../img/footer.jpg) center / 100% 100% no-repeat;
+    transform: translateX(-50%);
+}
+
+.bottom_nav a {
+    display: block;
+}
+
+@media (max-height: 850px) {
+    .gatya_main {
+        padding-top: 35px;
+    }
+
+    .gatya_machine {
+        width: min(68vw, 280px);
+    }
+
+    .gatya_button {
+        margin-top: 25px;
+    }
+}
