@@ -1,0 +1,40 @@
+// js/data/characters.js
+
+export const CHARACTER_MASTER = [
+    {
+        id: "sakamoto",
+        name: "坂本龍馬",
+        attribute: "ピカピカ",
+        type: "こうげき",
+        baseHp: 100,
+        baseAttack: 10,
+        speed: 8,
+        skillName: "ピカピカ一文字",
+        strongAgainst: "あまいもの",
+        image: "img/characters/character.png",
+    },
+    {
+        id: "ieyasu",
+        name: "徳川いえやす",
+        attribute: "まもり",
+        type: "ぼうぎょ",
+        baseHp: 120,
+        baseAttack: 7,
+        speed: 5,
+        skillName: "まもりの歯ぐるま",
+        strongAgainst: "バイキン",
+        image: "img/characters/character.png",
+    },
+    {
+        id: "himiko",
+        name: "卑弥呼",
+        attribute: "さっぱり",
+        type: "サポート",
+        baseHp: 90,
+        baseAttack: 8,
+        speed: 7,
+        skillName: "いやしの泡",
+        strongAgainst: "ねばねば",
+        image: "img/characters/character.png",
+    },
+];

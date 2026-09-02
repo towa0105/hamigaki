@@ -39,14 +39,26 @@ header {
 .boss {
     margin-top: 200px;
 
+    .boss_gauge_bk {
+        width: 233px;
+        background-color: #666;
+        height: 12px;
+        border-radius: 30px;
+        box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.25) inset;
+
+        .boss_gauge {
+            background-color: tomato;
+            height: 12px;
+            border-radius: 30px;
+            box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.25) inset;
+
+        }
+    }
+
 }
 
-.boss_gauge {
-    background-color: tomato;
-    height: 12px;
-    border-radius: 30px;
-    box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.25) inset;
-}
+
+
 
 
 .boss.damage {

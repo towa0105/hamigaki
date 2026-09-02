@@ -5,8 +5,10 @@ body {
     background-color: #dff5ff;
     background-image: url(../img/background_gatya.jpg);
     background-repeat: no-repeat;
-    background-position: center 72px;
-    background-size: min(100%, 440px) auto;
+    background-position: top;
+
+    /* background-position: center 72px; */
+    /* background-size: min(100%, 440px) auto; */
 }
 
 .gatya_header {
