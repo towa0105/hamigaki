@@ -1,5 +1,7 @@
 body {
     background-color: #d6eeff;
+    padding-bottom: min(27.73vw, 122px);
+    font-family: "A P-OTF Soft Gothic StdN";
 }
 
 /* .back_ground {
@@ -50,27 +52,353 @@ body {
             0 16px);
 }
 
-.footer-shape {
+.star_object_1 {
+    position: absolute;
+    top: 570px;
+    left: 16px;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        scale: 1;
+        opacity: 0.7;
+    }
+
+    50% {
+        scale: 1.3;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 0.7;
+    }
+}
+
+
+
+.star_object_2 {
+    position: absolute;
+    top: 450px;
+    left: 87px;
+    animation: shine2 3s infinite;
+}
+
+@keyframes shine2 {
+    0% {
+        scale: 1.3;
+        opacity: 1;
+        transform: translateY(4px);
+    }
+
+    50% {
+        scale: 1;
+        opacity: 0.7;
+        transform: translateY(0px);
+
+    }
+
+    100% {
+        scale: 1.3;
+        opacity: 1;
+        transform: translateY(4px);
+    }
+}
+
+
+.star_object_3 {
+    position: absolute;
+    top: 330px;
+    right: 67px;
+    animation: shine 3s infinite;
+
+}
+
+.star_object_4 {
+    position: absolute;
+    top: 440px;
+    right: 3px;
+    animation: shine2 3s infinite;
+}
+
+.brush_bubble_object {
+    position: absolute;
+    top: 365px;
+}
+
+.bubbles_object {
+    position: absolute;
+    right: 0;
+    top: 330px;
+}
+
+
+
+
+.footer-menu {
     position: fixed;
-    left: 0;
+    left: 50%;
     bottom: 0;
-
-    width: 100%;
-    height: 90px;
-
-    /* ここに好きなグラデーションを指定できる */
-    background: linear-gradient(180deg,
-            #9cdbff 0%,
-            #35aaff 100%);
-
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 90' preserveAspectRatio='none'%3E%3Cpath d='M0 4 C18 28 105 40 220 40 C335 40 422 28 440 4 L440 90 L0 90 Z' fill='black'/%3E%3C/svg%3E");
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-
-    /* Safari / iPhone対応 */
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 90' preserveAspectRatio='none'%3E%3Cpath d='M0 4 C18 28 105 40 220 40 C335 40 422 28 440 4 L440 90 L0 90 Z' fill='black'/%3E%3C/svg%3E");
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-
     z-index: 100;
+    width: min(100%, 440px);
+    aspect-ratio: 440 / 230;
+    transform: translateX(-50%);
+}
+
+.footer-menu__background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    pointer-events: none;
+}
+
+.background_object {
+    z-index: 0;
+}
+
+.background_object#home {
+    position: absolute;
+    right: 0;
+    top: -100;
+
+}
+
+.background_object#bubble_2 {
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+
+}
+
+
+.footer-menu nav,
+.footer-menu__list {
+    position: absolute;
+    inset: 0;
+}
+
+.footer-menu__list {
+    list-style: none;
+}
+
+.footer-menu__item {
+    position: absolute;
+    z-index: 1;
+    aspect-ratio: 1;
+    background: #77c6f6;
+    border: min(0.91vw, 4px) solid #d6eeff;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 #83A2B9;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer-menu__item--home {
+    /* top: 16.4%; */
+    bottom: 16px;
+    left: 4.55%;
+    width: 19.55%;
+}
+
+.footer-menu__item--team {
+    bottom: 16px;
+    left: 30.9%;
+    width: 17.45%;
+}
+
+.footer-menu__item--gacha {
+    bottom: 16px;
+    left: 55.7%;
+    width: 17.45%;
+}
+
+.footer-menu__item--records {
+    bottom: 16px;
+    left: 80.2%;
+    width: 17.45%;
+}
+
+.footer-menu__item a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    color: #0879c5;
+    text-decoration: none;
+    border-radius: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.footer-menu__icon {
+    position: absolute;
+    top: 15%;
+    left: 23%;
+    width: 54%;
+    height: 54%;
+    object-fit: contain;
+}
+
+.footer-menu__icon--gacha {
+    top: 10%;
+    left: 21%;
+    width: 58%;
+    height: 58%;
+}
+
+.footer-menu__icon--calendar {
+    top: 10%;
+    left: 19%;
+    width: 62%;
+    height: 62%;
+}
+
+.footer-menu__item span {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    z-index: 2;
+    width: max-content;
+    color: #fffdf2;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #2C2000;
+    paint-order: stroke fill;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.08em;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+/* ==============================
+   Progression Map
+============================== */
+
+.progression-map {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+
+/* ==============================
+   Stage
+============================== */
+
+.stage {
+    /* 円のサイズ */
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: #0079CF;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.6);
+
+
+
+}
+
+.modal.active {
+    display: block;
+    z-index: 1000;
+}
+
+
+.modal__content {
+    padding: 0 42px;
+
+    .flag_wrap {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+
+        .flag {
+            position: relative;
+            z-index: 0;
+        }
+
+        .tiitle {
+            position: absolute;
+            z-index: 20;
+            color: #fff;
+        }
+    }
+
+    .battle_date_wrap {
+        padding: 2px;
+        border-radius: 8px;
+        height: 584px;
+        background-color: #FFF;
+
+        .boder {
+            border: 1px dashed #53B9EB;
+            border-radius: 8px;
+            height: 100%;
+
+            .battle_date {
+                padding: 0 14px;
+                margin-top: 56px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+    }
+
+
+
+}
+
+.btn_wrap {
+    display: flex;
+    gap: 16px;
+}
+
+.modal__close {
+    width: 112px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 1.2;
+    /* padding: 10px 21px; */
+    border-radius: 142px;
+    border: 1px solid #FFC4C4;
+    background: #FF6161;
+}
+
+.start_btn {
+    font-size: 20px;
+    text-decoration: none;
+    width: 136px;
+    height: 40px;
+    border-radius: 142px;
+    background: linear-gradient(250deg, #FFBD5B 64.53%, #FFCE85 72.97%);
+
 }

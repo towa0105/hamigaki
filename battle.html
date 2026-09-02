@@ -12,21 +12,20 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img src="img/haeder_icon_img.png" alt=""></a>
-        <div class="date_wrap">
-            <img src="img/Group 37.svg" alt="データを入れる枠">
-            <span class="data_value"></span>
+    <!-- <header>
+        <div class="header">
+            <div class="header-shape"></div>
         </div>
     </header>
     <main>
+        <img class="background_object_homes" src="img/homes.png" alt="">
         <div class="flex_wrap">
             <div class="boss">
                 <div class="boss_gauge_bk">
                     <div class="boss_gauge">
                     </div>
                 </div>
-                <img src="img/boss.png" alt="">
+                <img src="img/piza_monster.png" alt="">
             </div>
             <div class="brush">
                 <img src="img/brush.png" alt="">
@@ -37,7 +36,80 @@
             </div>
         </div>
 
+    </main> -->
+
+
+    <main>
+        <h1>バトル</h1>
+
+        <section>
+            <p>ステージ：<span id="stageName">-</span></p>
+            <p>残り時間：<span id="timeLeft">0</span>秒</p>
+            <p>ブラシ回数：<span id="brushCount">0</span></p>
+            <p>目標回数：<span id="targetBrushCount">0</span></p>
+        </section>
+
+        <section>
+            <h2>敵</h2>
+            <p>敵名：<span id="enemyName">-</span></p>
+            <p>敵HP：<span id="enemyHp">0</span></p>
+        </section>
+
+        <section>
+            <h2>スコア</h2>
+            <p>スコア：<span id="score">0</span></p>
+            <p>コンボ：<span id="combo">0</span></p>
+            <p>最大コンボ：<span id="maxCombo">0</span></p>
+            <p>必殺ゲージ：<span id="specialGauge">0</span>%</p>
+        </section>
+
+        <section>
+            <h2>味方チーム</h2>
+            <div id="partyList"></div>
+        </section>
+
+        <button id="startButton">バトル開始</button>
+
+        <!-- 開発用：MESHがまだない時はこのボタンで歯ブラシの動きを仮再現 -->
+        <button id="brushButton">歯ブラシを動かした</button>
+
+        <section>
+            <h2>ログ</h2>
+            <ul id="battleLog"></ul>
+        </section>
+        <!-- 結果モーダル -->
+        <div class="result-modal" id="resultModal" aria-hidden="true">
+            <div class="result-modal__overlay"></div>
+
+            <div class="result-modal__panel" role="dialog" aria-modal="true">
+                <button class="result-modal__close" id="resultCloseButton">×</button>
+
+                <div class="result-modal__stage" id="resultStageName">はのまち</div>
+
+                <div class="result-modal__ribbon">クリア</div>
+
+                <div class="result-modal__content">
+                    <p class="result-modal__label">スコア</p>
+                    <p class="result-modal__value" id="resultScore">0</p>
+
+                    <p class="result-modal__label">コンボ</p>
+                    <p class="result-modal__value" id="resultCombo">0</p>
+
+                    <p class="result-modal__label">れんぞく日数</p>
+                    <p class="result-modal__value" id="resultStreak">0</p>
+
+                    <div class="result-modal__coin">
+                        <span>🪙</span>
+                        <span id="resultCoin">0</span>
+                    </div>
+                </div>
+
+                <div class="result-modal__next" id="resultNextButton"><a href="./index.html">つぎへ</a></div>
+            </div>
+        </div>
     </main>
+
+    <script src="./js/battle.js"></script>
 
 </body>
 

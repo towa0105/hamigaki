@@ -7,17 +7,103 @@
     <title>ホーム | 歯磨き大戦</title>
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/index.css">
-    <script type="module" src="js/index.js"></script>
+    <script defer src="js/index.js"></script>
 </head>
 
 <body>
-    <!-- <header>
-        <div class="back_ground">aaaaa</div>
-    </header> -->
     <div class="header">
         <div class="header-shape"></div>
     </div>
-    <footer class="footer-shape"></footer>
+    <main>
+        <div class="progression-map">
+            <!-- ステージ -->
+            <button class="stage" data-stage="1">
+                1
+            </button>
+            <button class="stage" data-stage="2">
+                2
+            </button>
+            <button class="stage" data-stage="3">
+                3
+            </button>
+            <button class="stage" data-stage="4">
+                4
+            </button>
+        </div>
+        <!-- モーダル -->
+        <div class="modal">
+            <div class="modal__content">
+                <div class="flag_wrap">
+                    <h2 class="tiitle">せんりゃく</h2>
+                    <svg class="flag" xmlns="http://www.w3.org/2000/svg" width="265" height="60" viewBox="0 0 265 60"
+                        fill="none">
+                        <path
+                            d="M255.931 55.6153C249.409 59.3323 228.468 56.7052 218.813 54.927L219.333 48.4971C155.605 37.2072 85.1506 41.3747 45.0167 46.5222L46.2308 52.5179C37.7665 57.1985 16.1085 56.3037 6.33758 55.2712C6.33758 52.5179 9.80656 42.7665 11.541 38.235L2.1748 21.7151C4.94999 23.0918 18.2306 24.6979 24.524 25.3288L22.8152 13.1109C87.6158 -7.12598 195.628 6.17026 241.534 15.348C240.619 19.9657 239.621 24.3682 238.618 28.4263C244.1 28.4837 256.486 28.0132 262.175 25.673L252.635 42.0208L255.931 55.6153Z"
+                            fill="#0079CF" />
+                        <path
+                            d="M46.2308 52.5179L27.8453 49.0762L24.524 25.3288L22.8152 13.1109C87.6158 -7.12598 195.628 6.17026 241.534 15.348C240.619 19.9657 239.621 24.3683 238.618 28.4263M231.995 50.9691C227.811 50.0733 223.587 49.2508 219.333 48.4971C155.605 37.2072 85.1506 41.3747 45.0167 46.5222C38.4185 47.3685 32.6398 48.2413 27.8453 49.0762M238.618 28.4263C235.974 39.1282 233.294 47.4339 231.995 50.9691L218.813 54.927M219.333 48.4971L218.813 54.927C228.468 56.7052 249.409 59.3323 255.931 55.6153L252.635 42.0208L262.175 25.673C256.486 28.0132 244.1 28.4837 238.618 28.4263M45.0167 46.5222L46.2308 52.5179C37.7665 57.1985 16.1085 56.3037 6.33758 55.2712C6.33758 52.5179 9.80656 42.7665 11.541 38.235L2.1748 21.7151C4.94999 23.0918 18.2306 24.6979 24.524 25.3288"
+                            stroke="#FFD18C" stroke-width="5" stroke-linejoin="bevel" />
+                    </svg>
+                </div>
+                <div class="battle_date_wrap">
+                    <div class="boder">
+                        <div class="battle_date">
+                            <img src="img/enemy.png" alt="">
+                            <div class="btn_wrap">
+                                <button class="modal__close">
+                                    へんせいを<br>みなおす
+                                </button>
+                                <div class="start_btn"><a href="battle.html">しゅつじん</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="stars">
+            <img class="star_object_1" src="img/star.png" alt="星">
+            <img class="star_object_2" src="img/star.png" alt="星">
+            <img class="star_object_3" src="img/star.png" alt="星">
+            <img class="star_object_4" src="img/star.png" alt="星">
+        </div>
+        <img class="brush_bubble_object" src="img/brush_bubble.png" alt="">
+        <img class="bubbles_object" src="img/bubbles.png" alt="">
+    </main>
+    <footer class="footer-menu">
+        <img class="footer-menu__background" src="img/footer_background.png" alt="" aria-hidden="true">
+        <img class="background_object" id="home" src="img/home.png" alt="歯のお家">
+        <img class="background_object" id="bubble_2" src="img/bubble_2.png" alt="入道雲">
+        <nav aria-label="メインメニュー">
+            <ul class="footer-menu__list">
+                <li class="footer-menu__item footer-menu__item--home">
+                    <a href="index.html" aria-label="ホーム" aria-current="page">
+                        <img class="footer-menu__icon" src="img/home_icon.png" alt="" aria-hidden="true">
+                        <span>ホーム</span>
+                    </a>
+                </li>
+                <li class="footer-menu__item footer-menu__item--team">
+                    <a href="team.html" aria-label="なかま">
+                        <span>なかま</span>
+                    </a>
+                </li>
+                <li class="footer-menu__item footer-menu__item--gacha">
+                    <a href="gatya.html" aria-label="ガチャ">
+                        <img class="footer-menu__icon footer-menu__icon--gacha" src="img/gtya_icon.png" alt=""
+                            aria-hidden="true">
+                        <span>ガチャ</span>
+                    </a>
+                </li>
+                <li class="footer-menu__item footer-menu__item--records">
+                    <a href="#records" aria-label="きろく">
+                        <img class="footer-menu__icon footer-menu__icon--calendar" src="img/calendar_icon.png" alt=""
+                            aria-hidden="true">
+                        <span>きろく</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 
 </html>
