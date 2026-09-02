@@ -12,33 +12,6 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="header">
-            <div class="header-shape"></div>
-        </div>
-    </header>
-    <main>
-        <img class="background_object_homes" src="img/homes.png" alt="">
-        <div class="flex_wrap">
-            <div class="boss">
-                <div class="boss_gauge_bk">
-                    <div class="boss_gauge">
-                    </div>
-                </div>
-                <img src="img/piza_monster.png" alt="">
-            </div>
-            <div class="brush">
-                <img src="img/brush.png" alt="">
-            </div>
-            <div class="modal">
-                <img src="img/win.png" alt="">
-                <a href="index.html">次へ</a>
-            </div>
-        </div>
-
-    </main> -->
-
-
     <main>
         <h1>バトル</h1>
 
@@ -68,49 +41,83 @@
             <div id="partyList"></div>
         </section>
 
-        <button id="startButton">バトル開始</button>
+        <button type="button" id="startButton">バトル開始</button>
 
         <!-- 開発用：MESHがまだない時はこのボタンで歯ブラシの動きを仮再現 -->
-        <button id="brushButton">歯ブラシを動かした</button>
+        <button type="button" id="brushButton">歯ブラシを動かした</button>
 
         <section>
             <h2>ログ</h2>
             <ul id="battleLog"></ul>
         </section>
-        <!-- 結果モーダル -->
-        <div class="result-modal" id="resultModal" aria-hidden="true">
-            <div class="result-modal__overlay"></div>
-
-            <div class="result-modal__panel" role="dialog" aria-modal="true">
-                <button class="result-modal__close" id="resultCloseButton">×</button>
-
-                <div class="result-modal__stage" id="resultStageName">はのまち</div>
-
-                <div class="result-modal__ribbon">クリア</div>
-
-                <div class="result-modal__content">
-                    <p class="result-modal__label">スコア</p>
-                    <p class="result-modal__value" id="resultScore">0</p>
-
-                    <p class="result-modal__label">コンボ</p>
-                    <p class="result-modal__value" id="resultCombo">0</p>
-
-                    <p class="result-modal__label">れんぞく日数</p>
-                    <p class="result-modal__value" id="resultStreak">0</p>
-
-                    <div class="result-modal__coin">
-                        <span>🪙</span>
-                        <span id="resultCoin">0</span>
-                    </div>
-                </div>
-
-                <div class="result-modal__next" id="resultNextButton"><a href="./index.html">つぎへ</a></div>
-            </div>
-        </div>
     </main>
 
-    <script src="./js/battle.js"></script>
+    <!-- 結果モーダル -->
+    <div class="result-modal" id="resultModal" aria-hidden="true">
+        <div class="result-modal__overlay"></div>
 
+        <div class="result-modal__panel" role="dialog" aria-modal="true" aria-labelledby="resultStageName">
+            <button type="button" class="result-modal__close" id="resultCloseButton" aria-label="結果画面を閉じる">
+                ×
+            </button>
+
+            <div class="result-modal__stage" id="resultStageName">はのまち</div>
+
+            <div class="result-modal__ribbon">クリア</div>
+
+            <div class="result-modal__content">
+                <p class="result-modal__label">スコア</p>
+                <p class="result-modal__value" id="resultScore">0</p>
+
+                <p class="result-modal__label">コンボ</p>
+                <p class="result-modal__value" id="resultCombo">0</p>
+
+                <p class="result-modal__label">れんぞく日数</p>
+                <p class="result-modal__value" id="resultStreak">0</p>
+
+                <div class="result-modal__coin">
+                    <img src="img/coin.png" alt="コイン" />
+                    <span id="resultCoin">0</span>
+                </div>
+            </div>
+
+            <button type="button" class="result-modal__next" id="resultNextButton">
+                つぎへ
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/battle.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+<!-- <header>
+        <div class="header">
+            <div class="header-shape"></div>
+        </div>
+    </header>
+    <main>
+        <img class="background_object_homes" src="img/homes.png" alt="">
+        <div class="flex_wrap">
+            <div class="boss">
+                <div class="boss_gauge_bk">
+                    <div class="boss_gauge">
+                    </div>
+                </div>
+                <img src="img/piza_monster.png" alt="">
+            </div>
+            <div class="brush">
+                <img src="img/brush.png" alt="">
+            </div>
+            <div class="modal">
+                <img src="img/win.png" alt="">
+                <a href="index.html">次へ</a>
+            </div>
+        </div>
+
+    </main> -->
